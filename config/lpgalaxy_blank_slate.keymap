@@ -26,45 +26,21 @@
 
 / {
     chosen {
-       zmk,matrix_transform =
-#ifdef TBLE_DUAL_2U
-                       &dual_2u_transform;
-#elif defined(TBLE_MIT)
-                       &mit_transform;
-#else     
-                       &ortho_transform;
-#endif
+       zmk,matrix_transform = &mit_transform;
     };
+    combos {
+        compatible = "zmk,combos";
 
-    macros {
-      ZMK_MACRO(thumbs_up,
-		wait-ms = <1>;
-		tap-ms = <5>;
-                bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
-		)
-    };
-    
-    tap_dances {
-    	shifty: shift_caps_word {
-		compatible = "zmk,behavior-tap-dance";
-		label = "TD_SHIFTY";
-		#binding-cells = <0>;
-		tapping-term-ms = <150>;
-		bindings = <&kp LSHFT>, <&caps_word>;
-	};
-    };
+        hmr_gui {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <19 21>;
+        };
 
-// Conditional layer only when we have less thumb keys
-#ifdef TBLE_DUAL_2U
-    cond_layers {
-        compatible = "zmk,conditional-layers";
-	tri {
-	    if-layers = <NUM_L NAV_L>;
-	    then-layer = <SYM_L>;
+        hmr_gui_left {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <13 15>;
         };
     };
-#endif
-
     keymap {
         compatible = "zmk,keymap";
 
