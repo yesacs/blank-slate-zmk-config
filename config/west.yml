@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: 6b4d591c3792c89653e88772f18a3b063fb16d27
+      revision: 0f972f1cc3ff416435036d023b62c2e1df6fad96
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
