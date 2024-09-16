@@ -5,8 +5,8 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
   projects:
-    - name: petejohanson:pm
-      remote: sideband-behavior-wakeup-fixes
+    - name: petejohanson
+      remote: zmkfirmware
       revision: 0c59d3e5bfc562c529c0b3476c315fd915dd8a66
       import: app/west.ymlbb
     - name: blank-slate-zmk-module
