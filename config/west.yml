@@ -5,10 +5,10 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
   projects:
-    - name: petejohanson
-      remote: zmkfirmware
-      revision: 0c59d3e5bfc562c529c0b3476c315fd915dd8a66
-      import: app/west.ymlbb
+    - name: zmk
+      remote: petejohanson
+      revision: 0c59d3e
+      import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
       revision: main
